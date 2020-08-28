@@ -2,4 +2,5 @@ Data-Modeling-with-Postgres/demos/
 
 **/images
 **/.ipynb_checkpoints
+**/.vscode
 **/__pycache__
