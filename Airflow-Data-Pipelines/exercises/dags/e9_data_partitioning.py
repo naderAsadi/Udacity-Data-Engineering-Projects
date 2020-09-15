@@ -18,7 +18,7 @@ def load_trip_data_to_redshift(*args, **kwargs):
     aws_hook = AwsHook("aws_credentials")
     credentials = aws_hook.get_credentials()
     redshift_hook = PostgresHook("redshift")
-    execution_date = kwargs["execution_date"]
+    execution_date = kwargs["execution_date"] # We use execution_date to partion the data
     sql_stmt = sql_statements.COPY_MONTHLY_TRIPS_SQL.format(
         credentials.access_key,
         credentials.secret_key,

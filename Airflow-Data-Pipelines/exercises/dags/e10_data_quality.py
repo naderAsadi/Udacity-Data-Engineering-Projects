@@ -72,6 +72,7 @@ copy_trips_task = PythonOperator(
     dag=dag,
     python_callable=load_trip_data_to_redshift,
     provide_context=True,
+    sla = datetime.timedelta(hours=1) # Task should be done in an hour
 )
 
 check_trips = PythonOperator(
