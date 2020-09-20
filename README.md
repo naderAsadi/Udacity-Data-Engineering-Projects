@@ -4,10 +4,10 @@ This repository consists of several projects related to data engineering includi
 
 ## 1. Data Modeling
 
-### Data Modeling with PostgreSQL
+### 1.1 Data Modeling with PostgreSQL
 In this project, we put into practice the following concepts, data modeling with Postgres, database star schema design, ETL pipelining. A startup wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. Currently, they are collecting data in json format and the analytics team is particularly interested in understanding what songs users are listening to.
 
-### Data Modeling with Cassandra
+### 1.2 Data Modeling with Cassandra
 In this project, we apply Data Modeling with Cassandra and build an ETL pipeline using Python. We will build a Data Model around our queries that we want to get answers for.
 
 ## 2. Data Warehouse
