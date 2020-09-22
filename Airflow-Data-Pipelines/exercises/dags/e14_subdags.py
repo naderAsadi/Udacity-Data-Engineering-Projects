@@ -10,7 +10,7 @@ from airflow.operators.postgres_operator import PostgresOperator
 from airflow.operators.subdag_operator import SubDagOperator
 from airflow.operators.udacity_plugin import HasRowsOperator
 
-from lesson3.exercise3.subdag import get_s3_to_redshift_dag
+from subdags.subdag import get_s3_to_redshift_dag
 import sql_statements
 
 

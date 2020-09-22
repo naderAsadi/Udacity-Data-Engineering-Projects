@@ -5,7 +5,7 @@ from airflow.utils.decorators import apply_defaults
 
 
 class S3ToRedshiftOperator(BaseOperator):
-    # We are telling airflow that we want this param to be templetable
+    # We are telling airflow that we want this param(s3_key) to be templetable
     template_fields = ("s3_key",)
     copy_sql = """
         COPY {}

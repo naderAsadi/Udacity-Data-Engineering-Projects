@@ -46,7 +46,7 @@ dag = DAG(
     start_date=datetime.datetime(2018, 1, 1, 0, 0, 0, 0),
     end_date=datetime.datetime(2018, 2, 1, 0, 0, 0, 0),
     schedule_interval='@monthly',
-    max_active_runs=1 # Indicates how many DAGs can run in parallel(sometimes each step of analysis is dependent on the previous step)
+    max_active_runs=1 # Indicates how many runs of the DAG can be done in parallel(sometimes each step of analysis is dependent on the previous step)
 )
 
 create_trips_table = PostgresOperator(

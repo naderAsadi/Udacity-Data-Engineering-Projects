@@ -13,7 +13,8 @@ from airflow import DAG
 from airflow.contrib.hooks.aws_hook import AwsHook
 from airflow.hooks.postgres_hook import PostgresHook
 
-from airflow.operators import (
+# We use our registered custom operators
+from airflow.operators import ( 
     HasRowsOperator,
     PostgresOperator,
     PythonOperator,
@@ -45,7 +46,7 @@ copy_trips_task = S3ToRedshiftOperator(
     redshift_conn_id="redshift",
     aws_credentials_id="aws_credentials",
     s3_bucket="udac-data-pipelines",
-    s3_key="divvy/partitioned/{execution_date.year}/{execution_date.month}/divvy_trips.csv"
+    s3_key="divvy/partitioned/{execution_date.year}/{execution_date.month}/divvy_trips.csv" # We are using templating for execution_date
 )
 
 check_trips = HasRowsOperator(
